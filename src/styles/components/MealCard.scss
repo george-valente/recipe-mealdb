@@ -1,0 +1,58 @@
+@import '../reset'; 
+@import '../variables'; 
+
+.meals-container{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 1.25rem 0 1.25rem; 
+
+    .meal-card{
+        position: relative; 
+        font-family: 'Poppins'; 
+        padding: 0.25rem 0.25rem 0.5rem 0.25rem;
+        margin-bottom: 2.5rem; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        width: 300px; 
+        height: 300px; 
+        gap: 1rem;  
+        background-color: $text-white;
+        border-radius: 15px;
+        font-weight: 700; 
+        
+        
+    
+        img{
+            position: absolute; 
+            top: -25px;
+            width: 70%;  
+            height: auto; 
+            border-radius: 999px; 
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #navlink{
+            font-family: 'Poppins';
+            cursor: pointer; 
+            border: transparent; 
+            border-radius: 10px;    
+            font-weight: 500; 
+            padding: 0.5rem 1.25rem; 
+            color: $text-green; 
+            background-color: $bg-light-green;
+            transition: .2s;  
+
+            &:hover{
+                color: $text-white; 
+                background-color: $text-green;
+
+            }
+        }
+
+    }
+
+}

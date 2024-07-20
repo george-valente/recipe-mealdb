@@ -1,0 +1,62 @@
+@import '../reset'; 
+@import '../variables'; 
+
+.recipe{ 
+    padding: 1rem;
+    margin: 0 auto; 
+    background-color: $text-white;
+    border-radius: 25px; 
+    width: 90%; 
+
+    .recipe-details{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem; 
+
+        .img-container{
+            display: flex; 
+            justify-content: center;
+            height: fit-content; 
+            img{
+                max-width: 50%; 
+                height: auto;
+                border-radius: 999px; 
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+        }
+
+        .details{
+            width: 50%; 
+
+            h1{
+                text-align: center;
+                padding-bottom: 1rem; 
+            }
+            p{
+                font-size: 1rem; 
+                line-height: 2.2;
+                font-family: 'Poppins';
+                padding-bottom: 1rem; 
+            }
+
+            .ingredients{
+                .ingredients-title{
+                    display: flex; 
+                    align-items: center;
+                    gap: 0.5rem; 
+                }
+
+                ul > li{
+                    list-style-type: circle;
+                    padding-bottom: 0.7crem; 
+                }
+            }
+
+        }
+        
+
+        
+    }
+}

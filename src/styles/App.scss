@@ -1,0 +1,81 @@
+@import './reset'; 
+@import './variables'; 
+
+
+body{
+    font-family: 'Wittgenstein';
+    background-color: $bg-gray;
+    height: 100vh; 
+}
+
+.App{
+    display: flex; 
+    flex-direction: column; 
+
+    h1{
+        padding: 1rem 1rem 0rem 1rem; 
+    }
+
+    .recipes-categories{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        
+        .more-info{
+            display: flex; 
+            gap: 2rem; 
+            padding-right: 2rem;  
+
+            .number{
+                text-align: center;
+
+                h2{
+                    font-size: 1.75rem; 
+                    color: $text-green; 
+                }
+
+                p{
+                    color: $text-gray; 
+                }
+            }
+        }
+        
+        
+    }
+
+    .categories-filter{
+        ul{
+            flex-wrap: wrap;
+            margin-top: 2rem; 
+            display: flex; 
+            gap: 1.5rem; 
+            justify-content: center;
+
+            button{
+                background-color: transparent;
+                font-family: 'Poppins'; 
+                padding: 0.7rem 1rem; 
+                border: 1px solid $text-gray; 
+                border-radius: 999px; 
+                color: $text-gray; 
+                font-weight: 500; 
+                transition: 0.2s; 
+
+                &:hover,
+                &.active{
+                    cursor: pointer; 
+                    background-color: $text-black;
+                    color: $text-white; 
+                    border: 1px solid $text-black; 
+
+                }
+
+                
+            }
+        }
+
+
+    }
+}
+
+
