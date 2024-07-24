@@ -2,10 +2,22 @@ import { FilterVerticalIcon, ArrowRight02Icon, Search01Icon } from "hugeicons-re
 import { useState } from 'react'; 
 
 import '../styles/components/Header.scss'
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 export function Header(){
-    const [input, setInput] = useState(''); 
+    const [search, setSearch] = useState(''); 
+    const navigate = useNavigate(); 
+
+    const handleSubmit = (e) => {
+        console.log(e.target.value)
+        e.preventDefault(); 
+
+        if(!search) return; 
+
+        navigate(`search?q=${search}`);
+        setSearch(""); 
+
+    }
     
     return(
         <>
@@ -17,15 +29,18 @@ export function Header(){
         </h1>
         <div className="Header">
     
-            <div id="search-bar">
+            <form onSubmit = {handleSubmit}
+            id="search-bar">
                 <input
                 type="text"
-                value = {input}
-                onChange = {(e) => setInput(e.target.value)}
+                onChange = {(e) => setSearch(e.target.value)}
+                value = {search}
                 placeholder = "Search recipes..."
                 />
-                <Search01Icon />
-            </div>
+                <button type = "submit">
+                    <Search01Icon/>
+                </button>
+            </form>
 
             <div className="filter">
                 <FilterVerticalIcon />
