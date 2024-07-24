@@ -36,6 +36,12 @@
             margin-right: 1rem; 
         }
 
+        button{
+            cursor: pointer; 
+            background: transparent; 
+            border: transparent; 
+        }
+
         svg{
             color: $bg-light-gray; 
         }
