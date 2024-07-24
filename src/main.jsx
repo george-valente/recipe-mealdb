@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom'
 import { Recipe } from './components/Recipe.jsx'
 import { Header } from './components/Header.jsx'
+import { Search } from './components/Search.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/meal/:idMeal',
         element: <Recipe />
+      },
+      {
+        path: '/search',
+        element: <Search/>
       }
     ]
   }
