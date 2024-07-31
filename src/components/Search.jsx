@@ -1,5 +1,8 @@
 import { useSearchParams } from "react-router-dom"
 import {useState, useEffect} from 'react'; 
+import { Link } from "react-router-dom";
+
+import '../styles/components/Search.scss'
 
 const searchURL = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
@@ -29,10 +32,15 @@ const searchURL = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
 
     return(
-        <div className="container">
-            {/* <h1>Hello</h1> */}
+        <div className="search">
             {meals && meals.map((meal) => (
-                <p>{meal.strMeal}</p>
+                <div className="search-details">
+                    <div className="img-container">
+                        <img src={meal.strMealThumb} alt="" />
+                    </div>
+                    <h1>{meal.strMeal}</h1>
+                    <Link to = {`/meal/${meal.idMeal}`} id = "navlink">View recipe</Link>
+                </div>
             ))}
         </div>
     )

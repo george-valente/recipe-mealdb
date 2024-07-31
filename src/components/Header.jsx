@@ -24,7 +24,7 @@ export function Header(){
         <h1 id = "app-name">
             <NavLink  to = '/'
             activeClassName = "active">
-                Mealsz
+                yaMeal
             </NavLink>
         </h1>
         <div className="Header">
