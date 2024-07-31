@@ -1,0 +1,38 @@
+@mixin div-details{
+    display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem; 
+}
+
+@mixin img-container{
+    display: flex; 
+    justify-content: center;
+    height: fit-content; 
+}
+
+@mixin recipe-img{
+    max-width: 50%; 
+    height: auto;
+    border-radius: 999px; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@mixin green-button{
+    font-family: 'Poppins';
+    cursor: pointer; 
+    border: transparent; 
+    border-radius: 10px;    
+    font-weight: 500; 
+    padding: 0.5rem 1.25rem; 
+    color: $text-green; 
+    background-color: $bg-light-green;
+    transition: .2s;
+
+    &:hover{
+        color: $text-white; 
+        background-color: $text-green;
+
+    }
+}

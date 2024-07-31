@@ -1,0 +1,32 @@
+@import '../reset'; 
+@import '../variables'; 
+@import '../mixins.scss';
+
+.search{
+    width: 50%; 
+    margin: 0 auto; 
+    background-color: $text-white;
+    padding: 1rem; 
+    border-radius: 25px; 
+
+    .search-details{
+        @include div-details;
+
+        .img-container{
+            @include img-container;
+
+            img{
+                @include recipe-img; 
+            }
+        }
+
+        #navlink{
+            @include green-button; 
+        }
+
+        h1{
+            font-weight: bold; 
+            font-family: 'Poppins'; 
+        }
+    }
+}
