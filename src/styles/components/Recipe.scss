@@ -13,7 +13,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem; 
+        gap: 1rem;  
 
         .img-container{
             display: flex; 
@@ -46,11 +46,12 @@
                     display: flex; 
                     align-items: center;
                     gap: 0.5rem; 
+                    
                 }
 
                 ul > li{
                     list-style-type: circle;
-                    padding-bottom: 0.7crem; 
+                    padding-bottom: 0.7rem; 
                 }
             }
 
